@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="800" height="300" role="img" aria-label="Computational domain for wall-resolved large-eddy simulation of flow over a circular cylinder at Reynolds number 3900">
+  <style>
+    .ink   { stroke: #1f2328; fill: none; }
+    .fill  { fill: #1f2328; }
+    .faint { stroke: #8c959f; fill: none; }
+    .t     { fill: #1f2328; font-family: ui-monospace, "SFMono-Regular", "JetBrains Mono", Consolas, monospace; font-size: 12px; }
+    .t-dim { fill: #57606a; font-family: ui-monospace, "SFMono-Regular", Consolas, monospace; font-size: 11px; }
+    .t-name{ fill: #1f2328; font-family: ui-monospace, "SFMono-Regular", Consolas, monospace; font-size: 15px; font-weight: 700; letter-spacing: 3.5px; }
+    .t-sub { fill: #57606a; font-family: ui-monospace, "SFMono-Regular", Consolas, monospace; font-size: 11px; letter-spacing: 1.2px; }
+    @media (prefers-color-scheme: dark) {
+      .ink   { stroke: #e6edf3; }
+      .fill  { fill: #e6edf3; }
+      .faint { stroke: #6e7681; }
+      .t     { fill: #e6edf3; }
+      .t-dim { fill: #9198a1; }
+      .t-name{ fill: #e6edf3; }
+      .t-sub { fill: #9198a1; }
+    }
+  </style>
+
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" class="fill"/>
+    </marker>
+    <marker id="ah2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" class="fill"/>
+    </marker>
+  </defs>
+
+  <!-- streamwise dimension chain -->
+  <line x1="120" y1="22" x2="120" y2="36" class="faint" stroke-width="1"/>
+  <line x1="280" y1="22" x2="280" y2="36" class="faint" stroke-width="1"/>
+  <line x1="760" y1="22" x2="760" y2="36" class="faint" stroke-width="1"/>
+  <line x1="120" y1="29" x2="280" y2="29" class="ink" stroke-width="1" marker-start="url(#ah2)" marker-end="url(#ah2)"/>
+  <line x1="280" y1="29" x2="760" y2="29" class="ink" stroke-width="1" marker-start="url(#ah2)" marker-end="url(#ah2)"/>
+  <text x="200" y="18" class="t-dim" text-anchor="middle">L&#8341;</text>
+  <text x="520" y="18" class="t-dim" text-anchor="middle">L&#8340;</text>
+
+  <!-- transverse dimension -->
+  <line x1="92" y1="52" x2="106" y2="52" class="faint" stroke-width="1"/>
+  <line x1="92" y1="212" x2="106" y2="212" class="faint" stroke-width="1"/>
+  <line x1="99" y1="52" x2="99" y2="212" class="ink" stroke-width="1" marker-start="url(#ah2)" marker-end="url(#ah2)"/>
+  <text x="84" y="132" class="t-dim" text-anchor="middle" transform="rotate(-90 84 132)">L&#8348;</text>
+
+  <!-- domain -->
+  <rect x="120" y="52" width="640" height="160" class="ink" stroke-width="1.4"/>
+
+  <!-- boundary labels -->
+  <text x="440" y="46" class="t-dim" text-anchor="middle">slip / periodic</text>
+  <text x="440" y="226" class="t-dim" text-anchor="middle">slip / periodic</text>
+  <text x="112" y="132" class="t" text-anchor="middle" transform="rotate(-90 112 132)">inlet</text>
+  <text x="770" y="132" class="t" text-anchor="middle" transform="rotate(-90 770 132)">outlet</text>
+
+  <!-- inflow arrows -->
+  <line x1="132" y1="82"  x2="172" y2="82"  class="ink" stroke-width="1.2" marker-end="url(#ah)"/>
+  <line x1="132" y1="132" x2="172" y2="132" class="ink" stroke-width="1.2" marker-end="url(#ah)"/>
+  <line x1="132" y1="182" x2="172" y2="182" class="ink" stroke-width="1.2" marker-end="url(#ah)"/>
+  <text x="190" y="136" class="t">U&#8734;</text>
+
+  <!-- cylinder -->
+  <circle cx="280" cy="132" r="15" class="ink" stroke-width="1.6"/>
+  <line x1="265" y1="132" x2="295" y2="132" class="faint" stroke-width="0.8" stroke-dasharray="2 2"/>
+  <line x1="280" y1="147" x2="280" y2="166" class="faint" stroke-width="0.8"/>
+  <text x="280" y="180" class="t" text-anchor="middle">D</text>
+
+  <!-- spanwise note -->
+  <text x="760" y="246" class="t-dim" text-anchor="end">spanwise L&#8367;, periodic &#183; wall-resolved, no wall model</text>
+
+  <!-- name band -->
+  <line x1="120" y1="264" x2="760" y2="264" class="faint" stroke-width="1"/>
+  <text x="120" y="288" class="t-name">ZAKI AHSAN</text>
+  <text x="760" y="288" class="t-sub" text-anchor="end">WALL-RESOLVED LES &#183; Re = 3900 &#183; OpenFOAM v2312</text>
+</svg>
